@@ -1,0 +1,72 @@
+/* Estilos generales para el formulario */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilos para cada campo del formulario */
+  form div {
+    margin-bottom: 15px;
+  }
+  
+  form div label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  form div input[type="text"],
+  form div input[type="date"],
+  form div input[type="time"],
+  form div input[type="number"],
+  form div input[type="checkbox"] {
+    width: calc(100% - 10px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+  }
+  
+  /* Estilos para el botón de envío */
+  button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilos para los mensajes de error */
+  .ng-touched.ng-invalid {
+    border-color: #dc3545;
+  }
+  
+  .ng-touched.ng-invalid + .error-message {
+    color: #dc3545;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  .error-message {
+    display: none;
+  }
+  
+  .ng-touched.ng-invalid + .error-message {
+    display: block;
+  }
+      

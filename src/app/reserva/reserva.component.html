@@ -1,0 +1,75 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Formulario -->
+            <h4>Reserva</h4>
+            <hr>
+            <form autocomplete="off" (ngSubmit)="guardar(forma)" #forma="ngForm">
+                <div>
+                    <div class="form-group row">
+                        <label class="col-2 col-form-label">Nombre de la reserva</label>
+                        <div class="col-8">
+                            <input class="form-control" type="text" name="nombrereserva" placeholder="Nombre de la reserva"
+                                   [(ngModel)]="reservaModel.nombrereserva" required minlength="3" #nombrereserva="ngModel">
+                            <small *ngIf="nombrereserva.invalid && nombrereserva.touched" class="form-text text-danger">Ingrese el nombre de la reserva</small>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-2 col-form-label">Fecha de reserva</label>
+                        <div class="col-8">
+                            <input class="form-control" type="date" name="fechareserva" placeholder="Fecha de reserva"
+                                   [(ngModel)]="reservaModel.fechareserva" required #fechareserva="ngModel">
+                            <small *ngIf="fechareserva.invalid && fechareserva.touched" class="form-text text-danger">La fecha de reserva es obligatoria</small>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-2 col-form-label">Hora de reserva</label>
+                        <div class="col-8">
+                            <input class="form-control" type="time" name="horareserva" placeholder="Hora de reserva"
+                                   [(ngModel)]="reservaModel.horareserva" required #horareserva="ngModel">
+                            <small *ngIf="horareserva.invalid && horareserva.touched" class="form-text text-danger">La hora de reserva es obligatoria</small>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-2 col-form-label">Número de personas</label>
+                        <div class="col-8">
+                            <input class="form-control" type="number" name="numpersonas" placeholder="Número de personas"
+                                   [(ngModel)]="reservaModel.numpersonas" required #numpersonas="ngModel">
+                            <small *ngIf="numpersonas.invalid && numpersonas.touched" class="form-text text-danger">Ingrese el número de personas</small>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-2 col-form-label">Estado</label>
+                        <div class="col-8">
+                            <input class="form-control" type="text" name="estado" placeholder="Estado"
+                                   [(ngModel)]="reservaModel.estado" required #estado="ngModel">
+                            <small *ngIf="estado.invalid && estado.touched" class="form-text text-danger">Ingrese el estado</small>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-2 col-form-label">Fecha de registro</label>
+                        <div class="col-8">
+                            <input class="form-control" type="date" name="fecharegistro" placeholder="Fecha de registro"
+                                   [(ngModel)]="reservaModel.fecharegistro" required #fecharegistro="ngModel">
+                            <small *ngIf="fecharegistro.invalid && fecharegistro.touched" class="form-text text-danger">La fecha de registro es obligatoria</small>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-2 col-form-label">Estado de registro</label>
+                        <div class="col-8">
+                            <input type="checkbox" name="estadoregistro" [(ngModel)]="reservaModel.estadoregistro">
+                            Activo
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-2 col-form-label">&nbsp;</label>
+                    <div class="input-group col-md-8">
+                        <button type="submit" class="btn btn-outline btn-block">Guardar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+ 
